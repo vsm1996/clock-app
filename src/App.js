@@ -66,6 +66,7 @@ class App extends Component {
           <Display
             userInfo={userInfo}
             worldInfo={worldInfo}
+            show={show}
             handleToggle={this.handleToggle}
           />
         </div>
