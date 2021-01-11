@@ -1,0 +1,16 @@
+.btn {
+  cursor: pointer;
+  background: var(--color-white);
+  color: var(--color-grey);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 28px;
+  width: 146px;
+  height: 56px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

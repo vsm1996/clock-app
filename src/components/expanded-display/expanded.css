@@ -1,0 +1,30 @@
+.expanded-container {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: var(--color-grey);
+  display: flex;
+  padding: 63px 165px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.world-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.world-content {
+  color: var(--color-black);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 68px;
+}
