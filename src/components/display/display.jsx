@@ -1,6 +1,5 @@
 import React from 'react'
 import moment from 'moment'
-import Button from '../button/button'
 
 import './display.css'
 

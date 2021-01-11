@@ -1,5 +1,4 @@
 import React from 'react'
-import upArr from '../../assets/desktop/icon-arrow-up.svg'
 
 import './button.css'
 
