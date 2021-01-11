@@ -3,7 +3,7 @@ import moment from 'moment'
 
 import './display.css'
 
-const Display = ({ userInfo, worldInfo, handleToggle }) => {
+const Display = ({ userInfo, worldInfo, show, handleToggle }) => {
   const time = moment(worldInfo.datetime).format('h:mm')
   const localTime = moment(worldInfo.datetime).format('LT')
   const greeting = localTime.includes('AM') ? 'Good morning' : 'Good evening';
@@ -17,8 +17,8 @@ const Display = ({ userInfo, worldInfo, handleToggle }) => {
       </div>
       <div className="display-btn">
         <button className="btn" onClick={handleToggle}>
-          More
-          </button>
+          {show ? 'Less' : 'More'}
+        </button>
       </div>
     </section>
   );
