@@ -36,7 +36,7 @@ class App extends Component {
 
   fetchTime = async (info) => {
     const { ip } = info;
-    const data = await fetch(`http://worldtimeapi.org/api/ip/${ip}`);
+    const data = await fetch(`https://worldtimeapi.org/api/ip/${ip}`);
 
     return data.json();
   };
