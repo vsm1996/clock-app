@@ -1,4 +1,60 @@
 .quote-container {
   font-size: 18px;
   line-height: 28px;
+  font-weight: 300;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  max-width: 573px;
+}
+
+.quote {
+  width: 86%;
+  margin: 0;
+}
+
+.quote-author {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.btn-refresh {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+.btn-refresh:focus {
+  outline: none;
+}
+
+.refresh-icon:hover {
+  animation: rotate 2s linear infinite;
+}
+
+@media only screen and (max-width: 1024px) {
+  .quote-container {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .quote-container {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -1,12 +1,10 @@
 import React from 'react'
-import moment from 'moment'
 import './expanded.css'
 
-const Expanded = ({ worldInfo }) => {
-  const time = moment(worldInfo.datetime).format('LT');
+const Expanded = ({ worldInfo, isDay }) => {
 
   return (
-    <section className={time.includes('AM') ? 'expanded-container expanded-container__day' : 'expanded-container expanded-container__night'}>
+    <section className={isDay ? 'expanded-container expanded-container__day' : 'expanded-container expanded-container__night'}>
       <div className="column">
         <p className='world-item'>Current Timezone <span className="world-content">{worldInfo.timezone}</span></p>
         <p className='world-item'>Day of the Week <span className="world-content">{worldInfo.day_of_week}</span></p>

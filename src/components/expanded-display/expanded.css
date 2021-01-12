@@ -1,6 +1,6 @@
 .expanded-container {
   display: flex;
-  padding: 63px 165px;
+  padding: 40px 165px;
 }
 
 .expanded-container__day {
@@ -35,7 +35,7 @@
   line-height: 68px;
 }
 
-@media only screen and (max-width: 875px) {
+@media only screen and (max-width: 1024px) {
   .expanded-container {
     padding: 2.8rem 3rem;
     justify-content: space-between;
@@ -51,14 +51,16 @@
   }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 650px) {
   .expanded-container {
     flex-direction: column;
-    padding: 50px 26px;
+    padding: 50px 32px;
   }
 
   .world-item {
     margin-bottom: 1.12rem;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .world-content {
