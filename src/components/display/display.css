@@ -45,6 +45,9 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
   border-radius: 28px;
   width: 146px;
   height: 56px;
@@ -53,4 +56,46 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.font-light {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 28px;
+}
+
+@media only screen and (max-width: 875px) {
+  .display-container {
+    flex-direction: column;
+  }
+
+  .display__greeting {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 3.6px;
+  }
+
+  .display__time {
+    font-size: 175px;
+    line-height: 175px;
+    letter-spacing: -4.375px;
+  }
+
+  .display__location {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 3.6px;
+  }
+
+  .display-btn {
+    margin-top: 5rem;
+    align-self: initial;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .display__time {
+    font-size: 100px;
+    line-height: 100px;
+  }
 }

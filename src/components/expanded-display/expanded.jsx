@@ -1,15 +1,17 @@
 import React from 'react'
-
+import moment from 'moment'
 import './expanded.css'
 
 const Expanded = ({ worldInfo }) => {
+  const time = moment(worldInfo.datetime).format('LT');
+
   return (
-    <section className="expanded-container">
+    <section className={time.includes('AM') ? 'expanded-container expanded-container__day' : 'expanded-container expanded-container__night'}>
       <div className="column">
         <p className='world-item'>Current Timezone <span className="world-content">{worldInfo.timezone}</span></p>
         <p className='world-item'>Day of the Week <span className="world-content">{worldInfo.day_of_week}</span></p>
       </div>
-      <hr />
+      <hr className="bar" />
       <div className="column">
         <p className='world-item'>Day of the Year <span className="world-content">{worldInfo.day_of_year}</span></p>
         <p className='world-item'>Week Number <span className="world-content">{worldInfo.week_number}</span></p>
