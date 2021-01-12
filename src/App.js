@@ -38,7 +38,7 @@ class App extends Component {
       case currentHour >= 12 && currentHour <= 17:
         dayPeriod = "afternoon";
         break;
-      case currentHour >= 18 && currentHour < 5:
+      case currentHour >= 18 && currentHour < 23:
         dayPeriod = "evening";
         break;
       default:
