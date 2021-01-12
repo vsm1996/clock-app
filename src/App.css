@@ -1,6 +1,9 @@
 .App {
   color: var(--color-white);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .background-day {
@@ -18,7 +21,7 @@
 }
 
 .container {
-  padding: 65px 165px 98px;
+  padding: 40px 165px;
 }
 
 .content {
@@ -39,7 +42,7 @@
   height: 625px;
 }
 
-@media only screen and (max-width: 875px) {
+@media only screen and (max-width: 1024px) {
   .background-day {
     background: url(./assets/tablet/bg-image-daytime.jpeg) rgba(0, 0, 0, 0.3)
       center no-repeat;
@@ -55,7 +58,7 @@
   }
 
   .container {
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
   }
 
   .content-height {
@@ -63,7 +66,7 @@
   }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 650px) {
   .background-day {
     background: url(./assets/mobile/bg-image-daytime.jpeg) rgba(0, 0, 0, 0.3)
       center no-repeat;
@@ -76,5 +79,9 @@
       center no-repeat;
     background-blend-mode: multiply;
     background-size: cover;
+  }
+
+  .container {
+    padding: 2rem;
   }
 }

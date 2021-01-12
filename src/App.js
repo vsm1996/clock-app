@@ -24,6 +24,29 @@ class App extends Component {
     this.fetchQuote().then((data) => this.setState({ quote: data }));
   }
 
+  refreshQuote = (e) => {
+    e.preventDefault();
+    this.fetchQuote().then((data) => this.setState({ quote: data }));
+  };
+
+  getTimeOfDay = (currentHour) => {
+    var dayPeriod;
+    switch (true) {
+      case currentHour >= 5 && currentHour <= 11:
+        dayPeriod = "morning";
+        break;
+      case currentHour >= 12 && currentHour <= 17:
+        dayPeriod = "afternoon";
+        break;
+      case currentHour >= 18 && currentHour < 5:
+        dayPeriod = "evening";
+        break;
+      default:
+        return "morning";
+    }
+    return dayPeriod;
+  };
+
   fetchQuote = async () => {
     const data = await fetch("https://api.quotable.io/random");
     return data.json();
@@ -49,29 +72,28 @@ class App extends Component {
 
   render() {
     const { userInfo, worldInfo, quote, show } = this.state;
-    const time = moment(worldInfo.datetime).format("LT");
-
+    const currentHour = moment(worldInfo.datetime).hours();
+    const isDay = currentHour > 6 && currentHour < 18;
+    const dayPeriod = this.getTimeOfDay(currentHour);
     return (
-      <div
-        className={
-          time.includes("AM") ? "App background-day" : "App background-night"
-        }
-      >
+      <div className={isDay ? "App background-day" : "App background-night"}>
         <div
           className={
             show ? "container content" : "container content content-height"
           }
         >
-          <Quote quote={quote} show={show} />
+          <Quote quote={quote} show={show} handleClick={this.refreshQuote} />
           <Display
             userInfo={userInfo}
             worldInfo={worldInfo}
+            isDay={isDay}
+            dayPeriod={dayPeriod}
             show={show}
             handleToggle={this.handleToggle}
           />
         </div>
         <div className={show ? "show" : "hide"}>
-          <Expanded worldInfo={worldInfo} />
+          <Expanded worldInfo={worldInfo} isDay={isDay} />
         </div>
       </div>
     );
