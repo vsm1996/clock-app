@@ -42,7 +42,7 @@ class App extends Component {
         dayPeriod = "evening";
         break;
       default:
-        return "morning";
+        return "evening";
     }
     return dayPeriod;
   };
