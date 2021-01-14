@@ -17,7 +17,6 @@
   background: url(./assets/desktop/bg-image-nighttime.jpeg) rgba(0, 0, 0, 0.3)
     center no-repeat;
   background-blend-mode: multiply;
-  background-size: cover;
 }
 
 .container {
