@@ -82,7 +82,7 @@ class App extends Component {
             show ? "container content" : "container content content-height"
           }
         >
-          <Quote quote={quote} show={show} handleClick={this.refreshQuote} />
+          {/* <Quote quote={quote} show={show} handleClick={this.refreshQuote} /> */}
           <Display
             userInfo={userInfo}
             worldInfo={worldInfo}
